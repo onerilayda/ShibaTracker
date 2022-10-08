@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShibaTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shibaicon" translatesAutoresizingMaskIntoConstraints="NO" id="ZA2-ka-YsG">
+                                <rect key="frame" x="117" y="348" width="180" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="8hw-Ra-dQL"/>
+                                    <constraint firstAttribute="width" constant="180" id="qv6-Ja-90G"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shiba Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNv-Wv-ra4">
+                                <rect key="frame" x="10" y="80" width="394" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="ptT-q2-3II"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <color key="textColor" name="Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOL-iD-vWy" userLabel="CoinView">
+                                <rect key="frame" x="33" y="155" width="348" height="76"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="oMk-u4-O09">
+                                        <rect key="frame" x="2" y="13" width="344" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MiniLogo" translatesAutoresizingMaskIntoConstraints="NO" id="deC-LC-csb">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="JjV-Vc-Sjg"/>
+                                                    <constraint firstAttribute="width" constant="55" id="ckC-el-dWh"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvn-ks-v3d">
+                                                <rect key="frame" x="55" y="0.0" width="239" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="239" id="DO2-XL-Q4G"/>
+                                                    <constraint firstAttribute="height" constant="50" id="skG-2G-vTZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fw1-1Q-hg0">
+                                                <rect key="frame" x="294" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="4Xl-IQ-8mX"/>
+                                                    <constraint firstAttribute="width" constant="50" id="N6q-3N-xqg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="Color"/>
+                                <constraints>
+                                    <constraint firstItem="oMk-u4-O09" firstAttribute="leading" secondItem="gOL-iD-vWy" secondAttribute="leading" constant="2" id="LBI-dY-2fn"/>
+                                    <constraint firstAttribute="trailing" secondItem="oMk-u4-O09" secondAttribute="trailing" constant="2" id="S2h-IY-0ga"/>
+                                    <constraint firstAttribute="height" constant="76" id="XCj-IY-ZGH"/>
+                                    <constraint firstItem="oMk-u4-O09" firstAttribute="centerX" secondItem="gOL-iD-vWy" secondAttribute="centerX" id="lEI-cf-URW"/>
+                                    <constraint firstItem="oMk-u4-O09" firstAttribute="centerY" secondItem="gOL-iD-vWy" secondAttribute="centerY" id="yHL-Gp-zfj"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwE-h4-ucp">
+                                <rect key="frame" x="350.5" y="44" width="43.5" height="31"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="bell.fill" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="notificationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ny-dE-nuM"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDR-WF-ryY">
+                                <rect key="frame" x="0.0" y="682" width="414" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="bso-WD-6ps"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IDR-WF-ryY" secondAttribute="bottom" id="2Qt-KE-c3T"/>
+                            <constraint firstItem="tNv-Wv-ra4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="6tH-1k-hx5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tNv-Wv-ra4" secondAttribute="trailing" constant="10" id="9R8-dg-5xV"/>
+                            <constraint firstItem="gOL-iD-vWy" firstAttribute="top" secondItem="tNv-Wv-ra4" secondAttribute="bottom" constant="20" id="Erv-Fn-Iz9"/>
+                            <constraint firstItem="ZA2-ka-YsG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IXL-Xd-hUi"/>
+                            <constraint firstItem="ZA2-ka-YsG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Jvf-Gd-x8N"/>
+                            <constraint firstItem="tNv-Wv-ra4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="MXr-9O-cAW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wwE-h4-ucp" secondAttribute="trailing" constant="20" id="Qgh-UK-c7P"/>
+                            <constraint firstItem="IDR-WF-ryY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YiI-he-CKw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gOL-iD-vWy" secondAttribute="trailing" constant="33" id="iNW-wP-qGa"/>
+                            <constraint firstItem="gOL-iD-vWy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="juf-vz-Hn3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IDR-WF-ryY" secondAttribute="trailing" id="u4x-nl-vCF"/>
+                            <constraint firstItem="wwE-h4-ucp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xIn-Tf-Yow"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coinView" destination="gOL-iD-vWy" id="HFa-52-njg"/>
+                        <outlet property="currencyLabel" destination="Fw1-1Q-hg0" id="TyX-Pe-rHK"/>
+                        <outlet property="currencyPicker" destination="IDR-WF-ryY" id="N73-90-OeY"/>
+                        <outlet property="notificationButton" destination="wwE-h4-ucp" id="Ji6-2y-6yo"/>
+                        <outlet property="shibaLabel" destination="xvn-ks-v3d" id="gRx-u7-OyZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178.40000000000001" y="-90.404797601199405"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MiniLogo" width="512" height="512"/>
+        <image name="bell.fill" catalog="system" width="128" height="124"/>
+        <image name="shibaicon" width="512" height="512"/>
+        <namedColor name="Color">
+            <color red="0.9649999737739563" green="0.024000000208616257" blue="0.012000000104308128" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

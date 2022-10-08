@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // Override point for customization after application launch.
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            // Enable or disable features based on authorization.
+            if error != nil {
+                print("Request authorization failed!")
+            } else {
+                print("Request authorization succeeded!")
+                self.showAlert()
+            }
+        }
         return true
+    }
+    
+    
+    func showAlert() {
+        let objAlert = UIAlertController(title: "Alert", message: "Request authorization succeeded", preferredStyle: UIAlertController.Style.alert)
+
+        objAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        //self.presentViewController(objAlert, animated: true, completion: nil)
+
+        UIApplication.shared.keyWindow?.rootViewController?.present(objAlert, animated: true, completion: nil)
     }
 
     // MARK: UISceneSession Lifecycle
